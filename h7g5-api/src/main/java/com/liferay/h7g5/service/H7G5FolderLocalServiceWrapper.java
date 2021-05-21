@@ -49,6 +49,13 @@ public class H7G5FolderLocalServiceWrapper
 		return _h7g5FolderLocalService.addH7G5Folder(h7g5Folder);
 	}
 
+	@Override
+	public com.liferay.h7g5.model.H7G5Folder addMyCustomH7G5Folder(
+		String description, String name) {
+
+		return _h7g5FolderLocalService.addMyCustomH7G5Folder(description, name);
+	}
+
 	/**
 	 * Creates a new h7g5 folder with the primary key. Does not add the h7g5 folder to the database.
 	 *

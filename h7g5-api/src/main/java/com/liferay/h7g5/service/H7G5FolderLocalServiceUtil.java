@@ -58,6 +58,12 @@ public class H7G5FolderLocalServiceUtil {
 		return getService().addH7G5Folder(h7g5Folder);
 	}
 
+	public static H7G5Folder addMyCustomH7G5Folder(
+		String description, String name) {
+
+		return getService().addMyCustomH7G5Folder(description, name);
+	}
+
 	/**
 	 * Creates a new h7g5 folder with the primary key. Does not add the h7g5 folder to the database.
 	 *

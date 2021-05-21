@@ -14,6 +14,7 @@
 
 package com.liferay.h7g5.service.impl;
 
+import com.liferay.h7g5.model.H7G5Folder;
 import com.liferay.h7g5.service.base.H7G5FolderLocalServiceBaseImpl;
 import com.liferay.portal.aop.AopService;
 
@@ -43,4 +44,20 @@ public class H7G5FolderLocalServiceImpl extends H7G5FolderLocalServiceBaseImpl {
 	 *
 	 * Never reference this class directly. Use <code>com.liferay.h7g5.service.H7G5FolderLocalService</code> via injection or a <code>org.osgi.util.tracker.ServiceTracker</code> or use <code>com.liferay.h7g5.service.H7G5FolderLocalServiceUtil</code>.
 	 */
+
+	public H7G5Folder addMyCustomH7G5Folder(String description, String name) {
+		System.out.println(
+			"Invoking H7G5FolderServiceImpl#addMyCustomH7G5Folder(" +
+				description + ", " + name + ")");
+
+		H7G5Folder h7g5Folder = h7g5FolderLocalService.createH7G5Folder(
+			System.currentTimeMillis());
+
+		h7g5Folder.setDescription(description);
+		h7g5Folder.setName(name);
+
+		h7g5FolderLocalService.addH7G5Folder(h7g5Folder);
+
+		return h7g5Folder;
+	}
 }

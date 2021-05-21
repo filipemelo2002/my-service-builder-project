@@ -74,6 +74,8 @@ public interface H7G5FolderLocalService
 	@Indexable(type = IndexableType.REINDEX)
 	public H7G5Folder addH7G5Folder(H7G5Folder h7g5Folder);
 
+	public H7G5Folder addMyCustomH7G5Folder(String description, String name);
+
 	/**
 	 * Creates a new h7g5 folder with the primary key. Does not add the h7g5 folder to the database.
 	 *
